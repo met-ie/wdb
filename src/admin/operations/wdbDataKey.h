@@ -49,7 +49,7 @@
 class WdbDataKey
 {
 public:
-	WdbDataKey(const pqxx::result::tuple & data);
+	WdbDataKey(const pqxx::row & data);
 	~WdbDataKey();
 	
 	/// Get data data's provider id

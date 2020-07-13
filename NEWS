@@ -1,5 +1,11 @@
 wdb (1.6.0-2) centos 7; urgency=low
 
+  * Updated to build against libpqxx-5.0.1
+
+ -- Conor Daly <conor.daly@met.ie>  Wed, 10 Jun 2020 15:06:00
+
+wdb (1.6.0-2) centos 7; urgency=low
+
   * Updated Centos 7 dependencies for PostGis and Postgres 9.6.
 
  -- Conor Daly <conor.daly@met.ie>  Wed, 10 Jun 2020 15:06:00

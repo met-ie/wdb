@@ -75,7 +75,7 @@ struct Parameter
 	std::string parameter;
 
 	/// Construct a parameter from a database row.
-	Parameter(const pqxx::result::tuple & data) :
+	Parameter(const pqxx::row & data) :
 		unitName(data["parameterunit"].as<std::string>()),
 				parameter(data["parameter"].as<std::string>())
 	{
@@ -105,7 +105,7 @@ struct Level
 	std::string domain;
 
 	/// Construct a level from a database row.
-	Level(const pqxx::result::tuple & data)
+	Level(const pqxx::row & data)
 		: from(data["levelfrom"].as<int>())
 		, to(data["levelto"].as<int>())
 		, unitName(data["levelunitname"].as<std::string>())

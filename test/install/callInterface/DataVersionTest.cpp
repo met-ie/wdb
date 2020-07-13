@@ -377,7 +377,7 @@ void DataVersionTest::testV7_02B_NegativeVersionOutOfBounds()
 namespace
 {
 	template<int Val>
-	inline bool hasDataVersion(const result::tuple & t )
+	inline bool hasDataVersion(const row & t )
 	{
 		return t["dataversion"].as<int>() == Val;
 	}

@@ -159,7 +159,7 @@ protected:
 /**
  * Functor to check if a column of a database row has a specified value. 
  */
-class KeyHasValue : public std::unary_function<pqxx::result::tuple, bool> 
+class KeyHasValue : public std::unary_function<pqxx::row, bool> 
 {
 	const std::string key_;
 	const std::string value_;

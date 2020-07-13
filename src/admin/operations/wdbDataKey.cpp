@@ -33,7 +33,7 @@
 
 namespace
 {
-	boost::posix_time::ptime asTime(const pqxx::result::tuple & row, const char * key)
+	boost::posix_time::ptime asTime(const pqxx::row & row, const char * key)
 	{
 		const std::string timeString = row[key].as<std::string>();
 		return boost::posix_time::time_from_string(timeString);
@@ -41,7 +41,7 @@ namespace
 }
 
 
-WdbDataKey::WdbDataKey(const pqxx::result::tuple & data)
+WdbDataKey::WdbDataKey(const pqxx::row & data)
 	: dataProvider_(data["dataproviderid"].as<int>())
 	, referenceTime_(asTime(data, "referencetime"))
 	, placeId_(data["placeid"].as<int>())
