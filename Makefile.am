@@ -203,7 +203,7 @@ dbclean:
 install-database:
 	mkdir -p @builddir@/var/logs/
 	rm -f @builddir@/var/logs/*
-	@builddir@/install/install_database -d $(DATABASE_NAME)
+	@builddir@/install/install_database --with-postgis=/usr/pgsql-9.6/share/contrib/postgis/ -d $(DATABASE_NAME)
 
 uninstall-database: install/uninstall_database
 	@builddir@/install/uninstall_database -d $(DATABASE_NAME) 
